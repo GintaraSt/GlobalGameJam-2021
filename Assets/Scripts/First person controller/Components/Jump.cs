@@ -8,6 +8,8 @@ public class Jump : MonoBehaviour
     public float jumpStrength = 2;
     public event System.Action Jumped;
 
+    public FirstPersonMovement fpm;
+
 
     void Reset()
     {
@@ -28,5 +30,7 @@ public class Jump : MonoBehaviour
             rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
             Jumped?.Invoke();
         }
+
+        fpm.isGrounded = groundCheck.isGrounded;
     }
 }
