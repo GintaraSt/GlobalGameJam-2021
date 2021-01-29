@@ -9,6 +9,10 @@ public class RobotFollow : MonoBehaviour
     public float acceleration = 800f;
     public float maxSpeed = 100f;
 
+    public ParticleSystem particles0;
+    public ParticleSystem particles1;
+    public ParticleSystem particles2;
+
     private Rigidbody rb;
 
     // Update is called once per frame
@@ -26,6 +30,16 @@ public class RobotFollow : MonoBehaviour
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            particles0.Play();
+            particles1.Play();
+            particles2.Play();
         }
     }
 }
