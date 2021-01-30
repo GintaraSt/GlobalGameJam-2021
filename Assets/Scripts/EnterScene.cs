@@ -10,4 +10,7 @@ public class EnterScene : MonoBehaviour
     {
         SceneManager.LoadScene(SceneName);
     }
+    public void AplicationQuit(){
+        Application.Quit();
+    }
 }
