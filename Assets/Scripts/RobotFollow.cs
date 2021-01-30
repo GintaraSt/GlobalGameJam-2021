@@ -13,23 +13,29 @@ public class RobotFollow : MonoBehaviour
     public ParticleSystem particles1;
     public ParticleSystem particles2;
 
+    private bool huntMode = false;
+
     private Rigidbody rb;
 
     // Update is called once per frame
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void FixedUpdate()
     {
-        gameObject.transform.LookAt(playerTransform);
-
-        rb.AddRelativeForce(Vector3.forward * acceleration * Time.deltaTime);
-
-        if (rb.velocity.magnitude > maxSpeed)
+        if (huntMode)
         {
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+            gameObject.transform.LookAt(playerTransform);
+
+            rb.AddRelativeForce(Vector3.forward * acceleration * Time.deltaTime);
+
+            if (rb.velocity.magnitude > maxSpeed)
+            {
+                rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+            }
         }
     }
 
@@ -41,5 +47,17 @@ public class RobotFollow : MonoBehaviour
             particles1.Play();
             particles2.Play();
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            huntMode = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            huntMode = false;
     }
 }

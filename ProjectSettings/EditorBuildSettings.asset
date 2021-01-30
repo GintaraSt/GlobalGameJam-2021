@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test3.unity
     guid: 62ab1a3f8bc21ab499ad8cbaa9599fa7
+  - enabled: 1
+    path: Assets/Scenes/Office.unity
+    guid: fb69d792e87fd4949b490853bc4e7075
+  - enabled: 1
+    path: Assets/Scenes/cells.unity
+    guid: 53749e5140d87e447827eb072225ac26
+  - enabled: 1
+    path: Assets/Scenes/Plants.unity
+    guid: a679f423beb75824b89233f2dc496c7b
   m_configObjects: {}

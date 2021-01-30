@@ -91,6 +91,45 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void ReloadScene()
+    {
+        StartCoroutine(ReloadLevel());
+    }
+
+    IEnumerator ReloadLevel()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneList[currentScene]);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        foreach(GameObject pl in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            if (pl != player)
+            {
+                Destroy(pl);
+            }
+        }
+
+        foreach (GameObject sm in GameObject.FindGameObjectsWithTag("SceneManager"))
+        {
+            if (sm != gameObject)
+            {
+                Destroy(sm);
+            }
+        }
+
+        player.GetComponent<Rigidbody>().isKinematic = true;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        OnSceneLoad();
+    }
+
     IEnumerator LoadAsyncScene()
     {
         // The Application loads the Scene in the background as the current Scene runs.

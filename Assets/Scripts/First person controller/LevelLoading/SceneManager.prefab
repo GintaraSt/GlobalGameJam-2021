@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8297192476513862060}
   m_Layer: 0
   m_Name: SceneManager
-  m_TagString: Untagged
+  m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,5 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b73e13e5ed0f404b829d1019c9565de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneList: []
+  sceneList:
+  - cells
+  - Office
+  - Test2
   firstElevator: {fileID: 0}
+  player: {fileID: 0}

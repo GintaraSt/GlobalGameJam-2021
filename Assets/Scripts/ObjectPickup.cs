@@ -22,6 +22,10 @@ public class ObjectPickup : MonoBehaviour
 
 	void Update()
 	{
+		if (player == null)
+		{
+			player = GameObject.FindGameObjectWithTag("Player").transform;
+		}
 		if (beingCarried)
 		{
 			if (Input.GetMouseButtonDown(0))

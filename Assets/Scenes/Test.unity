@@ -1159,6 +1159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3489044346732045819, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
 --- !u!4 &115619449 stripped
@@ -2467,6 +2471,10 @@ PrefabInstance:
     - target: {fileID: 1853693423118727754, guid: 0a4f8f0c83e57067eb12033c50e5d673, type: 3}
       propertyPath: m_Name
       value: GGJ enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853693423118727754, guid: 0a4f8f0c83e57067eb12033c50e5d673, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6726800833297227102, guid: 0a4f8f0c83e57067eb12033c50e5d673, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4603,6 +4611,10 @@ PrefabInstance:
     - target: {fileID: 6556593174106753388, guid: 626288bf806c338428830bb95a4625b1, type: 3}
       propertyPath: m_Name
       value: Elevator Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556593174106753388, guid: 626288bf806c338428830bb95a4625b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8449453294797038585, guid: 626288bf806c338428830bb95a4625b1, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -8705,6 +8717,10 @@ PrefabInstance:
     - target: {fileID: 2775293132029655957, guid: 0a4f8f0c83e57067eb12033c50e5d673, type: 3}
       propertyPath: m_LocalPosition.y
       value: 10.740318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385614123779693499, guid: 9661ce90f4e931d45a895236df249098, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4970495753726539063, guid: 9661ce90f4e931d45a895236df249098, type: 3}
       propertyPath: m_RootOrder
@@ -13579,6 +13595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9119264944496766307, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -14099,6 +14119,10 @@ PrefabInstance:
     - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_Name
       value: Stairs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9119264944496766307, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_RootOrder
@@ -14902,6 +14926,10 @@ PrefabInstance:
     - target: {fileID: 8297192476513862051, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: m_Name
       value: SceneManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297192476513862051, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: player
@@ -16663,6 +16691,10 @@ PrefabInstance:
     - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_Name
       value: Stairs (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9119264944496766307, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_RootOrder
@@ -19614,6 +19646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7301151405207541497, guid: 10950369207522541ad976e8a71b55db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10950369207522541ad976e8a71b55db, type: 3}
 --- !u!1001 &1570662518
@@ -21583,6 +21619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3489044346732045819, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
 --- !u!1001 &1811218460
@@ -22169,6 +22209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7301151405207541497, guid: 10950369207522541ad976e8a71b55db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10950369207522541ad976e8a71b55db, type: 3}
 --- !u!1001 &1864330292
@@ -22459,6 +22503,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 271342077, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 271342084, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1525720320114448, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -22466,6 +22518,10 @@ PrefabInstance:
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
       value: First person controller full
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_TagString
@@ -22519,6 +22575,22 @@ PrefabInstance:
       propertyPath: fpm
       value: 
       objectReference: {fileID: 2023930007}
+    - target: {fileID: 114497868231759342, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114762042097486276, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136877096903737240, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 136877096903737240, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Material
       value: 
@@ -22881,6 +22953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GGJ enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1853693423118727754, guid: 0a4f8f0c83e57067eb12033c50e5d673, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6726800833297227102, guid: 0a4f8f0c83e57067eb12033c50e5d673, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.212
@@ -23130,6 +23206,10 @@ PrefabInstance:
     - target: {fileID: 7301151405207541497, guid: 10950369207522541ad976e8a71b55db, type: 3}
       propertyPath: m_Name
       value: bench (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301151405207541497, guid: 10950369207522541ad976e8a71b55db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10950369207522541ad976e8a71b55db, type: 3}
@@ -24430,6 +24510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8297192476513862051, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: player
       value: 
@@ -24612,6 +24696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench
       objectReference: {fileID: 0}
+    - target: {fileID: 7301151405207541497, guid: 10950369207522541ad976e8a71b55db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10950369207522541ad976e8a71b55db, type: 3}
 --- !u!1001 &9119264944993764393
@@ -24628,6 +24716,10 @@ PrefabInstance:
     - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_Name
       value: Stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119264944496766304, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9119264944496766307, guid: ac7ac15145ef3b24db38858ef0dffb60, type: 3}
       propertyPath: m_RootOrder
