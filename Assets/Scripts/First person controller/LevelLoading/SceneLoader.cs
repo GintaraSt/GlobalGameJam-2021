@@ -96,6 +96,29 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(ReloadLevel());
     }
 
+    public void LoadMenu()
+    {
+        StartCoroutine(LoadMenuScene());
+    }
+
+    IEnumerator LoadMenuScene()
+    {
+        foreach(GameObject element in GameObject.FindObjectsOfType<GameObject>()){
+            if (element == gameObject)
+                continue;
+            Destroy(element);
+        }
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("0_menu");
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
+
     IEnumerator ReloadLevel()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneList[currentScene]);

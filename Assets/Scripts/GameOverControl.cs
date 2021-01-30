@@ -49,14 +49,13 @@ public class GameOverControl : MonoBehaviour
         gameOverUI.SetActive(false);
         ObjectPickup.dontAllowPickups = false;
         FirstPersonMovement.gameOver = false;
-
     }
 
     public void GoToMainMenu()
-    {
+    {   
         ObjectPickup.dontAllowPickups = false;
         FirstPersonMovement.gameOver = false;
-        //TODO: load main menu scene;
+        GameObject.FindObjectOfType<SceneLoader>().GetComponent<SceneLoader>().LoadMenu();
     }
 
     private void Start()
