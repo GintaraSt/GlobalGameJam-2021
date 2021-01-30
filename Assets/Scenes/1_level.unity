@@ -14930,7 +14930,7 @@ PrefabInstance:
       objectReference: {fileID: 461793737}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: sceneList.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: sceneList.Array.data[0]
@@ -14942,15 +14942,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: sceneList.Array.data[2]
-      value: 3_level_office
+      value: 3_level_plants
       objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: sceneList.Array.data[3]
-      value: 4_level_plants
+      value: 4_level_office
       objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: sceneList.Array.data[4]
-      value: 5_level_cells
+      value: 5_level_office_big
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297192476513862060, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
+      propertyPath: sceneList.Array.data[5]
+      value: 6_level_cells
       objectReference: {fileID: 0}
     - target: {fileID: 8297192476513862061, guid: 9812da6d3c5b44648a55fd4d69fa00f9, type: 3}
       propertyPath: m_RootOrder
