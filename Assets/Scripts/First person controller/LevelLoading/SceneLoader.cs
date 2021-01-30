@@ -96,6 +96,29 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(ReloadLevel());
     }
 
+    public void LoadMenu()
+    {
+        StartCoroutine(LoadMenuScene());
+    }
+
+    IEnumerator LoadMenuScene()
+    {
+        foreach(GameObject element in GameObject.FindObjectsOfType<GameObject>()){
+            if (element == gameObject)
+                continue;
+            Destroy(element);
+        }
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("0_menu");
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
+
     IEnumerator ReloadLevel()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneList[currentScene]);
@@ -123,10 +146,12 @@ public class SceneLoader : MonoBehaviour
         }
 
         player.GetComponent<Rigidbody>().isKinematic = true;
+        player.GetComponent<FirstPersonMovement>().levelDone = true;
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        GameOverControl.gameOverByTrigger = false;
         OnSceneLoad();
     }
 

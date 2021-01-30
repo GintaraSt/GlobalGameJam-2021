@@ -10,6 +10,7 @@ public class GameOverControl : MonoBehaviour
     public Volume volume;
 
     public GameObject gameOverUI;
+    public static bool gameOverByTrigger = false;
 
     public float slowdownTarget = 0.1f;
     private void OnCollisionEnter(Collision collision)
@@ -20,12 +21,14 @@ public class GameOverControl : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             gameOver = true;
             gameOverUI.SetActive(true);
+            ObjectPickup.dontAllowPickups = true;
+            FirstPersonMovement.gameOver = true;
+            gameOverByTrigger = true;
         }
     }
 
     public void RestartLevel()
     {
-        Debug.Log("restart");
         GameObject.FindObjectOfType<SceneLoader>().GetComponent<SceneLoader>().ReloadScene();
         gameOver = false;
         if (volume.profile.TryGet<Bloom>(out var bloom))
@@ -44,12 +47,15 @@ public class GameOverControl : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         gameOverUI.SetActive(false);
-
+        ObjectPickup.dontAllowPickups = false;
+        FirstPersonMovement.gameOver = false;
     }
 
     public void GoToMainMenu()
-    {
-        //TODO: load main menu scene;
+    {   
+        ObjectPickup.dontAllowPickups = false;
+        FirstPersonMovement.gameOver = false;
+        GameObject.FindObjectOfType<SceneLoader>().GetComponent<SceneLoader>().LoadMenu();
     }
 
     private void Start()
@@ -72,6 +78,15 @@ public class GameOverControl : MonoBehaviour
                 vignette.intensity.overrideState = true;
                 vignette.intensity.value = Mathf.Lerp(0, 1, 0.1f);
                 vignette.smoothness.value = Mathf.Lerp(0, 1, 0.1f);
+            }
+            if (!gameOverByTrigger) {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                gameOver = true;
+                gameOverUI.SetActive(true);
+                ObjectPickup.dontAllowPickups = true;
+                FirstPersonMovement.gameOver = true;
+                gameOverByTrigger = true;
             }
         }
     }

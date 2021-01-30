@@ -12,6 +12,11 @@ public class FirstPersonMovement : MonoBehaviour
     private float sprintEnergyRegen = 20;
     private float sprintEnergy = 100;
 
+    public bool dontMove = false;
+    public static bool gameOver = false;
+
+    public bool levelDone = false;
+
     public RectTransform energyRectTransform;
 
     Vector2 velocity;
@@ -24,7 +29,7 @@ public class FirstPersonMovement : MonoBehaviour
         if (isGrounded)
             hitWall = false;
 
-        if (!hitWall)
+        if (!hitWall && !dontMove && !gameOver)
         {
             velocity.y = Input.GetAxis("Vertical") * speed * Time.deltaTime;
             if (Input.GetKey(KeyCode.LeftShift) && !(sprintEnergy <= 0))
@@ -38,12 +43,12 @@ public class FirstPersonMovement : MonoBehaviour
             Mathf.Clamp(sprintEnergy, 0, 100);
             velocity.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
             transform.Translate(velocity.x, 0, velocity.y);
+            if (gameObject.GetComponent<Rigidbody>().isKinematic && levelDone)
+            {
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            }
         }
-        energyRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sprintEnergy * 2.391f);
-        if (gameObject.GetComponent<Rigidbody>().isKinematic)
-        {
-            gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        }
+        energyRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sprintEnergy * 2.391f);   
     }
 
     public void UnlockPlayer()
