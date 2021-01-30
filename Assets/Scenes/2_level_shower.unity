@@ -14518,11 +14518,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1964414313, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
+      propertyPath: elevator
+      value: 
+      objectReference: {fileID: 1777462913}
+    - target: {fileID: 1964414313, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
       propertyPath: isPressed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1964414313, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
       propertyPath: pressAndHold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964414313, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
+      propertyPath: enableElevator
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1274533084644359392, guid: def3390be2f1a6641b2c859fdc738588, type: 3}
@@ -19442,6 +19450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 626288bf806c338428830bb95a4625b1, type: 3}
+--- !u!1 &1777462913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6556593174106753388, guid: 626288bf806c338428830bb95a4625b1, type: 3}
+  m_PrefabInstance: {fileID: 1777462912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1777533512
 PrefabInstance:
   m_ObjectHideFlags: 0
