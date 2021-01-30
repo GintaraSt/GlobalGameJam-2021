@@ -52,19 +52,4 @@ public class ObjectPickup : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter(Collision collision)
-	{
-		if (collision.gameObject.tag == "Player")
-		{
-			gameObject.GetComponent<Collider>().enabled = false;
-		}
-	}
-
-	private void OnCollisionExit(Collision collision)
-	{
-		if (collision.gameObject.tag == "Player")
-		{
-			gameObject.GetComponent<Collider>().enabled = true;
-		}
-	}
 }
