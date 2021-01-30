@@ -123,6 +123,7 @@ public class SceneLoader : MonoBehaviour
         }
 
         player.GetComponent<Rigidbody>().isKinematic = true;
+        player.GetComponent<FirstPersonMovement>().levelDone = true;
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;

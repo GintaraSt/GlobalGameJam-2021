@@ -20,12 +20,13 @@ public class GameOverControl : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             gameOver = true;
             gameOverUI.SetActive(true);
+            ObjectPickup.dontAllowPickups = true;
+            FirstPersonMovement.gameOver = true;
         }
     }
 
     public void RestartLevel()
     {
-        Debug.Log("restart");
         GameObject.FindObjectOfType<SceneLoader>().GetComponent<SceneLoader>().ReloadScene();
         gameOver = false;
         if (volume.profile.TryGet<Bloom>(out var bloom))
@@ -44,11 +45,15 @@ public class GameOverControl : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         gameOverUI.SetActive(false);
+        ObjectPickup.dontAllowPickups = false;
+        FirstPersonMovement.gameOver = false;
 
     }
 
     public void GoToMainMenu()
     {
+        ObjectPickup.dontAllowPickups = false;
+        FirstPersonMovement.gameOver = false;
         //TODO: load main menu scene;
     }
 

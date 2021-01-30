@@ -32,6 +32,7 @@ public class ElevatorController : MonoBehaviour
             {
                 player.GetComponent<Rigidbody>().isKinematic = true;
                 player.transform.SetParent(gameObject.transform);
+                player.GetComponent<FirstPersonMovement>().dontMove = true;
                 animator.SetTrigger("isLevelDone");
                 GameObject.FindObjectOfType<SceneLoader>().LoadNextScene();
                 levelDoneSequenceAlreadyStarted = true;
@@ -51,7 +52,9 @@ public class ElevatorController : MonoBehaviour
 
     public void OnLevelLoadedAnimationEnd()
     {
-        player.GetComponent<Rigidbody>().isKinematic = false;
+        //player.GetComponent<Rigidbody>().isKinematic = false;
+        player.GetComponent<FirstPersonMovement>().levelDone = true;
+        player.GetComponent<FirstPersonMovement>().dontMove = false;
         isExitElevator = false;
         //dontDestroyList[dontDestroyList.Count - 1].GetComponent<ElevatorController>().isExitElevator = false;
     }

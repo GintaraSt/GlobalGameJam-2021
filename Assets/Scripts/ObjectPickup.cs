@@ -8,6 +8,8 @@ public class ObjectPickup : MonoBehaviour
 	bool hasPlayer = false;
 	bool beingCarried = false;
 
+	public static bool dontAllowPickups = false;
+
 	void OnTriggerEnter(Collider collider)
 	{
 		if (collider.gameObject.tag == "Player")
@@ -22,27 +24,30 @@ public class ObjectPickup : MonoBehaviour
 
 	void Update()
 	{
-		if (player == null)
+		if (!dontAllowPickups)
 		{
-			player = GameObject.FindGameObjectWithTag("Player").transform;
-		}
-		if (beingCarried)
-		{
-			if (Input.GetMouseButtonDown(0))
+			if (player == null)
 			{
-				GetComponent<Rigidbody>().isKinematic = false;
-				transform.parent = null;
-				beingCarried = false;
-				GetComponent<Rigidbody>().AddForce(player.forward * throwForce, ForceMode.Impulse);
+				player = GameObject.FindGameObjectWithTag("MainCamera").transform;
 			}
-		}
-		else
-		{
-			if (Input.GetMouseButtonDown(0) && hasPlayer)
+			if (beingCarried)
 			{
-				GetComponent<Rigidbody>().isKinematic = true;
-				transform.parent = player;
-				beingCarried = true;
+				if (Input.GetMouseButtonDown(0))
+				{
+					GetComponent<Rigidbody>().isKinematic = false;
+					transform.parent = null;
+					beingCarried = false;
+					GetComponent<Rigidbody>().AddForce(player.forward * throwForce, ForceMode.Impulse);
+				}
+			}
+			else
+			{
+				if (Input.GetMouseButtonDown(0) && hasPlayer)
+				{
+					GetComponent<Rigidbody>().isKinematic = true;
+					transform.parent = player;
+					beingCarried = true;
+				}
 			}
 		}
 	}
