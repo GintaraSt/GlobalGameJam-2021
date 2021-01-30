@@ -12,8 +12,10 @@ public class Button : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        isPressed = true;    
-        if(enableElevator) OpenElevator();
+        if (other.isTrigger == false)
+            isPressed = true;
+        if (other.gameObject.tag == "Player")
+            if(enableElevator) OpenElevator();
     }
 
     private void OnTriggerExit(Collider other)

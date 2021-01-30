@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -24,8 +25,15 @@ public class FirstPersonMovement : MonoBehaviour
     public bool hitWall = false;
     public bool isGrounded = true;
 
+    private void Start()
+    {
+    }
+
     void FixedUpdate()
     {
+        if (gameObject.scene.name == "DontDestroyOnLoad")
+            DontDestroyOnLoad(gameObject);
+
         if (isGrounded)
             hitWall = false;
 

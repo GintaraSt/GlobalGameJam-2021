@@ -63,6 +63,8 @@ public class SceneLoader : MonoBehaviour
         {
             foreach (GameObject elevator in dontDestroyList)
             {
+                if (elevator.GetComponentInChildren<FirstPersonMovement>())
+                    continue;
                 DontDestroyOnLoad(elevator);
             }
         }
@@ -103,7 +105,8 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator LoadMenuScene()
     {
-        foreach(GameObject element in GameObject.FindObjectsOfType<GameObject>()){
+        foreach (GameObject element in GameObject.FindObjectsOfType<GameObject>())
+        {
             if (element == gameObject)
                 continue;
             Destroy(element);
@@ -129,14 +132,18 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
 
-        foreach(GameObject pl in GameObject.FindGameObjectsWithTag("Player"))
+        if (firstRun)
         {
-            if (pl != player)
+            foreach (GameObject pl in GameObject.FindGameObjectsWithTag("Player"))
             {
-                Destroy(pl);
+                if (pl != player)
+                {
+                    Debug.Log("Player destroyed");
+                    Destroy(pl);
+                }
             }
         }
-
+        
         foreach (GameObject sm in GameObject.FindGameObjectsWithTag("SceneManager"))
         {
             if (sm != gameObject)
@@ -152,7 +159,7 @@ public class SceneLoader : MonoBehaviour
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
         GameOverControl.gameOverByTrigger = false;
-        OnSceneLoad();
+        //OnSceneLoad();
     }
 
     IEnumerator LoadAsyncScene()
@@ -172,7 +179,7 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
 
-        foreach(GameObject elevator in GameObject.FindGameObjectsWithTag("Elevator"))
+        foreach (GameObject elevator in GameObject.FindGameObjectsWithTag("Elevator"))
         {
             elevator.GetComponent<ElevatorController>().startLevelLoadedSequence = true;
         }

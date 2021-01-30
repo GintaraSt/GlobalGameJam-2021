@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneList:
-  - cells
-  - Office
-  - Test2
+  - 1_level
+  - 2_level_shower
+  - 3_level_plants
+  - 4_level_office
+  - 5_level_office_big
+  - 6_level_cells
   firstElevator: {fileID: 0}
   player: {fileID: 0}
