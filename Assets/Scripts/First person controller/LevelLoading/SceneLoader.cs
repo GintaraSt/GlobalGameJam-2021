@@ -128,6 +128,7 @@ public class SceneLoader : MonoBehaviour
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        GameOverControl.gameOverByTrigger = false;
         OnSceneLoad();
     }
 
