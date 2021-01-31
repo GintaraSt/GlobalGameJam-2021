@@ -159,6 +159,7 @@ public class SceneLoader : MonoBehaviour
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
         GameOverControl.gameOverByTrigger = false;
+        GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.GetChild(0).GetComponent<AudioSource>().Play();
         //OnSceneLoad();
     }
 

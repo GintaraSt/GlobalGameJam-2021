@@ -46,6 +46,8 @@ public class RobotFollow : MonoBehaviour
             particles0.Play();
             particles1.Play();
             particles2.Play();
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.GetChild(1).GetComponent<AudioSource>().Play();
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform.GetChild(0).GetComponent<AudioSource>().Pause();
         }
     }
 
